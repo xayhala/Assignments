@@ -1,149 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-
-:root {
-  /* Primary */
-  --orange: hsl(31, 77%, 52%);
-  --cyan: hsl(184, 100%, 22%);
-  --dark-cyan: hsl(179, 100%, 13%);
-
-  /* Neutral */
-  --white: hsla(0, 0%, 100%, 0.75);
-  --lightgray:  hsl(0, 0%, 95%);
+html {
+  height: 100%;
+  width: 100%;
+}
+body
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+ background-color:#ECF0F1;
+}
+#wrapper
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}
+#wrapper h1
+{
+ margin-top:50px;
+ font-size:45px;
+ color:#424949;
+}
+#wrapper h1 p
+{
+font-size:18px;
+}
+.form_div
+{
+width:330px;
+margin-left:320px;
+padding:10px;
+background-color:#424949;
+}
+.form_div .form_label
+{
+margin:15px;
+margin-bottom:30px;
+font-size:25px;
+font-weight:bold;
+color:white;
+text-decoration:underline;
+}
+.form_div input[type="text"],input[type="password"]
+{
+width:230px;
+height:40px;
+border-radius:2px;
+font-size:17px;
+padding-left:5px;
+border:none;
+}
+.form_div input[type="submit"]
+{
+width:230px;
+height:40px;
+border:none;
+border-radius:2px;
+font-size:17px;
+background-color:#7F8C8D;
+border-bottom:3px solid #616A6B;
+color:white;
+font-weight:bold;
 }
 
-*,
-*::before,
-*::after {
-  border: 0;
-  outline: 0;
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
+@media only screen and (min-width:700px) and (max-width:995px)
+{
+#wrapper
+{
+width:100%;
 }
-
-body {
-  box-sizing: border-box;
-  font-family: 'Lexend Deca', sans-serif;
-  font-weight: 400;
-  display: flex;
-  place-content: center;
-  background-color: var(--lightgray);
-  height: 100vh;
+#wrapper h1
+{
+font-size:30px;
 }
-
-h1 { 
-  font-family: 'Big Shoulders Display', cursive;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--lightgray);
+.form_div
+{
+width:50%;
+margin-left:25%;
+padding-left:0px;
+padding-right:0px;
 }
-
-p {
-  font-size: 15px;
-  margin: 25px 0 60px 0;
-  color: var(--white);
-  font-weight: 400;
-  line-height: 1.8;
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
 }
-.grid-button {
-    background-color: #d9d5d3;
-    color: hsla(0, 0%, 100%, 0.75);
-    border-radius: 50rem;
-    border: 0;
-    padding: 16px 32px;
-    font-family: 'Lexend Deca', sans-serif;
+.form_div textarea
+{
+width:80%;
 }
-a {
-    color: hsla(0, 0%, 100%, 0.75);
-    text-decoration: none;
-    font-size: 16px;
+.form_div input[type="submit"]
+{
+width:80%;
 }
-.box-container {
-  display: flex;
-  width: 840px;
-  align-items: center;
-  justify-content: center;
 }
-
-.boxes {
-  display: flex;
-  flex-direction: column;
-  padding: 40px 32px;
-  align-items: flex-start;
+@media only screen and (min-width:400px) and (max-width:699px)
+{
+#wrapper
+{
+width:100%;
 }
-
-.box1 {
-  background-color: var(--orange);
-  border-radius:  10px 0 0 10px;
+#wrapper h1
+{
+font-size:30px;
 }
-
-.box2 {
-  background-color: var(--cyan);
+.form_div
+{
+width:60%;
+margin-left:20%;
 }
-
-.box3 {
-  background-color: var(--dark-cyan);
-  border-radius:  0 10px 10px 0;
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
 }
-
-button {
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 16;
-  border: solid 2px var(--lightgray);
-  background: var(--lightgray);
-  transition: all ease 0.3s;
+.form_div input[type="submit"]
+{
+width:80%;
 }
-
-.box1 button {
-  color:hsl(31, 77%, 52%);
 }
-
-.box2 button {
-  color:hsl(184, 100%, 22%);
+@media only screen and (min-width:100px) and (max-width:399px)
+{
+#wrapper
+{
+width:100%;
 }
-
-.box3 button {
-  color:hsl(179, 100%, 13%);
+#wrapper h1
+{
+font-size:25px;
 }
-
-button:hover {
-  background: transparent;
-  color: var(--lightgray);
+.form_div
+{
+width:90%;
+margin-left:5%;
+padding-left:0px;
+padding-right:0px;
 }
-
-.circle {
-  margin-bottom: 30px;
+.form_div input[type="text"],input[type="password"]
+{
+width:80%;
 }
-
-
-/* MEDIA QUERY */
-@media only screen and (max-width: 600px) {
-  p {
-    margin-bottom: 20px;
-  }
-
-  body {
-    height: auto;
-  }
-
-  .box-container {
-    flex-direction: column;
-    margin: 16% 0;
-    padding: 8%;
-  }
-
-  .boxes {
-    padding: 38px 44px;
-  }
-
-  .box1 {
-    border-radius:  10px 10px 0 0;
-  }
-  
-  .box3 {
-    border-radius:  0 0 10px 10px;
-  }
-  
+.form_div input[type="submit"]
+{
+width:80%;
+}
 }
